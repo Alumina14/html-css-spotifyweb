@@ -26,7 +26,7 @@ overflow-y: visible;
 .navlaterale{
   width: 230px;
   /* height: calc(100vh - 90px); */
-  height: 100vh;
+  height: 100%;
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -78,7 +78,8 @@ overflow-y: visible;
   padding-left: 20px;
   width: 100%;
   position: absolute; /* da cambiare in position fixed in media query height */
-  bottom: 100px;
+  bottom: 90px;
+
 
 }
 
@@ -179,12 +180,17 @@ overflow-y: visible;
 }
 
 .footerleft{
-align-items: flex-start;
-display: inline;
+display: flex;
+justify-content: space-between;
 }
 
-.footerleft img{
-  width: 14%;
+.itemsleft{
+display: flex;
+justify-content: flex-start;
+width: 33%;
+}
+
+.itemsleft img{
 }
 
 .covermusic{
@@ -200,6 +206,7 @@ display: inline;
 .itemscover{
   display: flex;
   flex-wrap: nowrap;
+  width: 100%;
   height: auto;
   justify-content: center;
   align-items: center;
@@ -208,8 +215,9 @@ display: inline;
 
 .layover{
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
     color: #FFF;
     display: none;
 }
@@ -221,8 +229,6 @@ display: inline;
 
 .itemscover:hover .layover {
     background: rgba(0, 0, 0, .6);
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: auto;
 }
@@ -257,4 +263,9 @@ display: inline;
   border-radius: 100%;
 }
 
-/*nota per dopo, la classe .row è gia in display flex e ha flex-wrap wrap di default.
+.padbot{
+  padding-bottom: 90px;
+}
+/* Inizio media query */
+
+/*xs*/
