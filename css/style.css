@@ -423,7 +423,7 @@ width: 40%;
 /*height media query */
 @media screen and ( max-height: 800px ) {
   .overflowpl{
-    height: 70%;
+    height: 80%;
     overflow-y: scroll;
 
   }
